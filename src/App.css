@@ -1,42 +1,155 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.navbar {
+  background-color: #6a1b9a; /* Purple background */
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar {
+  background-color: #6a1b9a; /* Purple background */
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 24px; /* Adjust logo size */
+  margin-right: 15px; /* Space between logo and brand name */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px; /* Space after brand name */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Push login to the right */
 }
 
-.card {
-  padding: 2em;
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space between nav items */
+  color: white;
+  text-decoration: none;
 }
 
-.read-the-docs {
-  color: #888;
+.nav-icon {
+  margin-right: 5px; /* Space between icon and text */
+  font-size: 20px; /* Adjust icon size */
+}
+
+.login-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-label {
+  font-weight: 500; /* Label styling */
+}
+
+
+.homepage {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ensure images cover the space without distortion */
+}
+
+.search-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  height: 100vh;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.search-form {
+  margin-top: 40px; /* Space above the form */
+  width: 100%;
+  max-width: 800px; /* Increased max width */
+  background-color: white;
+  padding: 40px; /* Increased padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold; /* Make label text bold */
+}
+
+select {
+  width: 100%;
+  padding: 12px; /* Increased padding for select */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Space buttons apart */
+  margin-top: 10px; /* Space above the button group */
+}
+
+.clear-button, .search-button {
+  background-color: #9c27b0; /* Purple background */
+  color: white;
+  border: none;
+  padding: 12px; /* Increased padding */
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1; /* Allow buttons to take equal space */
+  margin-right: 5px; /* Space between buttons */
+}
+
+.clear-button:hover, .search-button:hover {
+  background-color: #7b1fa2; /* Darker purple on hover */
+}
+
+.advanced-search {
+  margin-top: 15px; /* Space above advanced search */
 }

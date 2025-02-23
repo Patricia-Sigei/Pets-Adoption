@@ -1,13 +1,31 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
+import { FaHome, FaSearch, FaUser } from 'react-icons/fa'; // Importing icons from react-icons
 
 const Navbar = () => {
   return (
-    <nav className="bg-green-600 p-4 text-white flex justify-between">
-      <h1 className="text-xl font-bold">Pet Adoption</h1>
-      <div>
-        <Link to="/" className="mx-2">Home</Link>
-        <Link to="/pets" className="mx-2">Find a Pet</Link>
-        <Link to="/adopt" className="mx-2">Adoption Info</Link>
+    <nav className="navbar">
+      <div className="navbar-content">
+        <span className="logo">🐾</span>
+        <span className="brand-name">Pet Adoption Agency</span>
+        <div className="nav-links">
+          <div className="nav-item">
+            <Link to="/"> {/* Link to Home */}
+              <FaHome className="nav-icon" />
+              <span className="nav-label">Home</span>
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link to="/search"> {/* Link to Search Page */}
+              <FaSearch className="nav-icon" />
+              <span className="nav-label">Search</span>
+            </Link>
+          </div>
+        </div>
+        <div className="login-item">
+          <FaUser className="nav-icon" />
+          <span className="nav-label">Login</span>
+        </div>
       </div>
     </nav>
   );
