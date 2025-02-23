@@ -1,21 +1,11 @@
-
-
-/* Tailwind CSS Directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
+/* Navbar Styles */
 .navbar {
-  background-color: #6a1b9a; /* Purple background */
+  background-color: #D2B48C; /* Warm Brown */
   color: white;
   padding: 10px 20px;
-}
-
-.navbar {
-  background-color: #6a1b9a; /* Purple background */
-  color: white;
-  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-content {
@@ -26,13 +16,13 @@
 
 .logo {
   font-size: 24px; /* Adjust logo size */
-  margin-right: 15px; /* Space between logo and brand name */
+  margin-right: 20px; /* Space between logo and brand name */
 }
 
 .brand-name {
   font-size: 24px;
   font-weight: bold;
-  margin-right: 20px; /* Space after brand name */
+  margin-right: 40px; /* Space after brand name */
 }
 
 .nav-links {
@@ -44,9 +34,10 @@
 .nav-item {
   display: flex;
   align-items: center;
-  margin-right: 20px; /* Space between nav items */
+  margin-right: 40px; /* Space between nav items */
   color: white;
-  text-decoration: none;
+  text-decoration: solid;
+  z-index: 1; 
 }
 
 .nav-icon {
@@ -57,43 +48,133 @@
 .login-item {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav-label {
   font-weight: 500; /* Label styling */
 }
 
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden; 
+  height: 100vh; 
+  width: 100vw; 
+  margin: 0;
+  padding: 0;
+}
 
+.hero-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Maintain aspect ratio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%; /* Center text vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; /* Text color */
+  font-weight: 100;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better visibility */
+}
+
+.btn {
+  display: block; /* Make button a block element */
+  margin: 20px auto; /* Center it and add space */
+  padding: 10px 20px;
+  background-color: #FFA07A; /* Earthy Orange */
+  color: white; /* Text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+  background-color: #FF8C42; /* Darker Earthy Orange on hover */
+}
+
+/* Home Page Styles */
 .homepage {
   text-align: center;
   padding: 20px;
+  background-color: #FFF8DC; /* Cream */
 }
 
 h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  color:black; /* Warm Brown */
 }
 
 p {
   font-size: 1.2em;
   margin-bottom: 20px;
+  color: #1a1714; /* Dark Brown */
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 10px;
+.homepage-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  justify-content: center; /* Center the cards */
+  margin-top: 20px;
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
+.homepage-pet-card {
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  padding: 15px;
+  width: calc(30% - 20px); /* Adjust as needed */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align the items */
+}
+
+.homepage-pet-image {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  border-radius: 8px;
   object-fit: cover; /* Ensure images cover the space without distortion */
 }
 
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space buttons evenly */
+  width: 100%; /* Full-width for the button container */
+  margin-top: 10px; /* Space above buttons */
+}
+
+/* Button Styles */
+.homepage-adopt-button, .homepage-details-button {
+  background-color:rgb(170, 170, 152); /* Gold */
+  color: #654321; /* Dark Brown */
+  border: none;
+  padding: 10px 15px; /* Add padding */
+  border-radius: 4px;
+  cursor: pointer;
+  width: 48%; /* Adjust width for both buttons */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.homepage-adopt-button:hover,
+.homepage-details-button:hover {
+  background-color: #FFA07A; 
+}
+
+/* Search Page Styles */
 .search-page {
   display: flex;
   flex-direction: column;
@@ -101,7 +182,7 @@ p {
   justify-content: flex-start; /* Align items to the top */
   height: 100vh;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #FFF8DC; /* Cream */
   padding: 20px;
 }
 
@@ -119,6 +200,7 @@ label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold; /* Make label text bold */
+  color: #D2B48C; /* Warm Brown */
 }
 
 select {
@@ -136,7 +218,7 @@ select {
 }
 
 .clear-button, .search-button {
-  background-color: #9c27b0; /* Purple background */
+  background-color: #FFA07A; /* Earthy Orange */
   color: white;
   border: none;
   padding: 12px; /* Increased padding */
@@ -144,12 +226,259 @@ select {
   cursor: pointer;
   flex: 1; /* Allow buttons to take equal space */
   margin-right: 5px; /* Space between buttons */
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
 .clear-button:hover, .search-button:hover {
-  background-color: #7b1fa2; /* Darker purple on hover */
+  background-color: #FF8C42; /* Darker Earthy Orange on hover */
 }
 
 .advanced-search {
   margin-top: 15px; /* Space above advanced search */
+}
+
+/* Search and Display Pets Styles */
+.search-and-display {
+  text-align: center;
+  padding: 20px;
+  background-color: #FFF8DC; /* Cream */
+}
+
+.search-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  justify-content: center; /* Center the cards */
+  margin-top: 20px;
+}
+
+.search-pet-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  width: calc(30% - 20px); /* Three cards per row */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align the items */
+}
+
+.search-pet-image {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  border-radius: 4px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.search-pet-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.search-pet-info h2 {
+  color: #D2B48C; /* Warm Brown */
+}
+
+.search-pet-info p {
+  color: #654321; /* Dark Brown */
+}
+
+/* Live Chat Widget Styles */
+.live-chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 260px;
+}
+
+.live-chat-widget h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #D2B48C; /* Warm Brown */
+}
+
+.live-chat-widget .messages {
+  height: 80px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.live-chat-widget .messages div {
+  padding: 4px 0;
+}
+
+.live-chat-widget .messages .user {
+  text-align: right;
+}
+
+.live-chat-widget .messages .bot {
+  text-align: left;
+}
+
+.live-chat-widget input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.live-chat-widget button {
+  width: 100%;
+  padding: 8px;
+  background-color: #FFA07A; /* Earthy Orange */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.live-chat-widget button:hover {
+  background-color: #FF8C42; /* Darker Earthy Orange on hover */
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+.login-form, .signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align form content */
+}
+
+.login-form h2, .signup-form h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  color: #D2B48C; /* Warm Brown */
+}
+
+.login-form input, .signup-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Full width inputs */
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align buttons and links */
+  width: 100%;
+}
+
+.login-form button, .signup-form button {
+  padding: 8px;
+  background-color: #FFA07A; /* Earthy Orange */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Full width button */
+  margin-bottom: 10px; /* Space below the button */
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover, .signup-form button:hover {
+  background-color: #FF8C42; /* Darker Earthy Orange on hover */
+}
+
+.signup-link, .login-link {
+  font-size: 14px; /* Smaller font size */
+  color: #654321; /* Dark Brown */
+  text-align: center;
+  margin-top: 10px; /* Add space above the link */
+}
+
+.signup-link span, .login-link span {
+  color: #D2B48C; /* Warm Brown */
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signup-link span:hover, .login-link span:hover {
+  color: #FF8C42; /* Darker Earthy Orange on hover */
+}
+
+/* Booking Modal Specific Styles */
+.booking-modal h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #D2B48C; /* Warm Brown */
+}
+
+.booking-modal .form-group {
+  margin-bottom: 15px;
+}
+
+.booking-modal .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #D2B48C; /* Warm Brown */
+}
+
+.booking-modal .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-modal .submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FFA07A; /* Earthy Orange */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-modal .submit-button:hover {
+  background-color: #FF8C42; /* Darker Earthy Orange on hover */
 }

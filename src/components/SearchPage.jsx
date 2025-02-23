@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../App.css'; // Ensure this is the correct path to your CSS file
+import '../App.css'; 
 
 const SearchPage = () => {
   const [petType, setPetType] = useState('');

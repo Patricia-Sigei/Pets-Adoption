@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPets } from "../services/petService";  // Ensure this is correctly imported
+import { getPets } from "../services/petService";  
 import { Col, Row } from "react-bootstrap";
 import { PetCard } from "./PetCard";
 

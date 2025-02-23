@@ -12,21 +12,22 @@ const LiveChat = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white p-4 shadow-lg rounded-md w-64">
-      <h2 className="text-lg font-bold mb-2">Live Chat</h2>
-      <div className="h-40 overflow-y-auto border p-2 mb-2">
+    <div className="live-chat-widget">
+      <h2>Live Chat</h2>
+      <div className="messages">
         {messages.map((msg, index) => (
-          <div key={index} className={`p-1 ${msg.sender === 'user' ? 'text-right' : 'text-left'}`}>{msg.text}</div>
+          <div key={index} className={msg.sender === 'user' ? 'user' : 'bot'}>
+            {msg.text}
+          </div>
         ))}
       </div>
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="border p-1 w-full"
         placeholder="Type a message..."
       />
-      <button onClick={sendMessage} className="bg-green-600 text-white p-1 mt-2 w-full rounded">Send</button>
+      <button onClick={sendMessage}>Send</button>
     </div>
   );
 };

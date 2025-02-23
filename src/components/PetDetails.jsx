@@ -5,7 +5,7 @@ import { Card, Col, Row } from "react-bootstrap";
 
 export function PetDetails() {
     const { id } = useParams();
-    const [pet, setPet] = useState(null); // ✅ Fix TypeScript issue
+    const [pet, setPet] = useState(null); 
 
     useEffect(() => {
         if (id !== undefined) {
