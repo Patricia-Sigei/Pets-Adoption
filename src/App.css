@@ -1,8 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Apply globally */
+}
+
+/* Top Green Bar */
+.header-top {
+  background-color: #FF8C42;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.header-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.header-link:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.header-icons {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.social-icon {
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ddd; /* Lighten on hover */
+}
+
+/* Bottom White Bar */
+.header-bottom {
+  background-color: white;
+  padding: 10px 10px; /* Set padding to 25px on all sides */
+  display: flex;
+  justify-content: space-between; /* Space between title and contact info */
+  align-items: center; /* Center align items vertically */
+}
+
+.header-title {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: black; 
+  gap: 8px;
+}
+
+.contact-info {
+  display: flex; 
+  gap: 40px; 
+  font-size: 1rem; 
+  color: #333; 
+}
+
+/* Individual contact items */
+.contact-item {
+  display: flex;
+  flex-direction: column; /* Stack title and value vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+/* Ensure contact info links are underlined */
+.contact-info a {
+  text-decoration: underline;
+  color: #007bff; 
+}
+
+
+.contact-item strong {
+  margin-bottom: 0; 
+}
 /* Navbar Styles */
 .navbar {
   background-color: black;
   color: white;
-  padding: 10px 20px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;  
   align-items: center;
@@ -20,7 +109,7 @@
 }
 
 .brand-name {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-right: 40px; /* Space after brand name */
   color: white; /* Ensure brand name is white */
@@ -35,14 +124,15 @@
 .nav-item {
   display: flex;
   align-items: center;
-  margin-right: 40px; /* Space between nav items */
+  margin-right: 150px; /* Space between nav items */
   color: white; /* Ensure text is white */
-  text-decoration: none; /* Remove underline */
+  text-decoration: none; 
+  font-size: 20px;
 }
 
 .nav-icon {
   margin-right: 5px; /* Space between icon and text */
-  font-size: 20px; /* Adjust icon size */
+  font-size: 30px; /* Adjust icon size */
   color: white; /* Ensure icons are white */
 }
 
@@ -50,7 +140,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: white; /* Ensure login text is white */
+  color: white; 
 }
 
 .nav-label {
@@ -62,7 +152,7 @@
   position: relative;
   text-align: center;
   overflow: hidden; 
-  height: 100vh; 
+  height: 80vh; 
   width: 100%; 
   margin: 0;
   padding: 0;
@@ -92,8 +182,8 @@
 .btn {
   display: block; 
   margin: 20px auto; 
-  padding: 10px 20px;
-  background-color: #FFA07A; 
+  padding: 20px 20px;
+  background-color: #FF8C42; 
   color: white; /* Text color */
   border: none;
   border-radius: 5px; /* Rounded corners */

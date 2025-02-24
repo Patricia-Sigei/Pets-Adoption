@@ -18,11 +18,9 @@ const Hero = () => {
     <div className="hero">
       <img src={mainImage} alt="Dog Adoption" className="hero-image" />
       <div className="hero-text">
-        <h1 className="hero-title">Welcome to Your Journey of Love and Companionship</h1>
-        <p className="hero-subtitle">
-          Adopt a Pet and Change a Life Forever
-        </p>
-        <button className="btn" onClick={openModal}>Book Now</button>
+        <h1 className="hero-title"> Adopt a Pet and Get a Lifetime Companion</h1>
+       
+        <button className="btn" onClick={openModal}>Adopt Now</button>
       </div>
       {isModalOpen && <BookingModal onClose={closeModal} />}
     </div>
