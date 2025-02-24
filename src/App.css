@@ -63,7 +63,7 @@
   text-align: center;
   overflow: hidden; 
   height: 100vh; 
-  width: 100vw; 
+  width: 100%; 
   margin: 0;
   padding: 0;
 }
@@ -80,20 +80,20 @@
 
 .hero-text {
   position: absolute;
-  top: 65%; /* Move text downwards */
+  top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
   color: black; /* Text color */
   font-weight: 100;
-  font-size: 1.2rem; /* Reduced font size */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better visibility */
+  font-size: 1.2rem; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
 }
 
 .btn {
-  display: block; /* Make button a block element */
-  margin: 20px auto; /* Center it and add space */
+  display: block; 
+  margin: 20px auto; 
   padding: 10px 20px;
-  background-color: #FFA07A; /* Earthy Orange */
+  background-color: #FFA07A; 
   color: white; /* Text color */
   border: none;
   border-radius: 5px; /* Rounded corners */
@@ -286,17 +286,39 @@ select {
   color: #654321; /* Dark Brown */
 }
 
-/* Live Chat Widget Styles */
-.live-chat-widget {
+/* Live Chat Container */
+.live-chat-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Chat Icon */
+.chat-icon {
+  background-color: #FFA07A; /* Earthy Orange */
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-icon:hover {
+  background-color: #FF8C42; /* Darker Earthy Orange on hover */
+}
+
+/* Live Chat Widget */
+.live-chat-widget {
   background-color: white;
   padding: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 260px;
+  margin-top: 10px; /* Space between icon and widget */
 }
 
 .live-chat-widget h2 {
@@ -307,7 +329,7 @@ select {
 }
 
 .live-chat-widget .messages {
-  height: 80px;
+  height: 150px; /* Fixed height for messages */
   overflow-y: auto;
   border: 1px solid #ccc;
   padding: 8px;
@@ -321,10 +343,12 @@ select {
 
 .live-chat-widget .messages .user {
   text-align: right;
+  color: #FFA07A; /* Earthy Orange */
 }
 
 .live-chat-widget .messages .bot {
   text-align: left;
+  color: #D2B48C; /* Warm Brown */
 }
 
 .live-chat-widget input {
@@ -349,7 +373,6 @@ select {
 .live-chat-widget button:hover {
   background-color: #FF8C42; /* Darker Earthy Orange on hover */
 }
-
 /* Modal Styles */
 .modal-overlay {
   position: fixed;
