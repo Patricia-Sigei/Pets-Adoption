@@ -1,10 +1,10 @@
 /* Navbar Styles */
 .navbar {
-  background-color: #D2B48C; /* Warm Brown */
+  background-color: black;
   color: white;
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
   align-items: center;
 }
 
