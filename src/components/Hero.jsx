@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="hero-text">
         <h1 className="hero-title">Welcome to Your Journey of Love and Companionship</h1>
         <p className="hero-subtitle">
-          Discover Your Perfect Companion Today – Adopt a Pet and Change a Life Forever
+          Adopt a Pet and Change a Life Forever
         </p>
         <button className="btn" onClick={openModal}>Book Now</button>
       </div>

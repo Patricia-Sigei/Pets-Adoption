@@ -23,6 +23,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-right: 40px; /* Space after brand name */
+  color: white; /* Ensure brand name is white */
 }
 
 .nav-links {
@@ -35,20 +36,21 @@
   display: flex;
   align-items: center;
   margin-right: 40px; /* Space between nav items */
-  color: white;
-  text-decoration: solid;
-  z-index: 1; 
+  color: white; /* Ensure text is white */
+  text-decoration: none; /* Remove underline */
 }
 
 .nav-icon {
   margin-right: 5px; /* Space between icon and text */
   font-size: 20px; /* Adjust icon size */
+  color: white; /* Ensure icons are white */
 }
 
 .login-item {
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: white; /* Ensure login text is white */
 }
 
 .nav-label {
@@ -78,12 +80,12 @@
 
 .hero-text {
   position: absolute;
-  top: 50%; /* Center text vertically */
+  top: 65%; /* Move text downwards */
   left: 50%;
   transform: translate(-50%, -50%);
   color: black; /* Text color */
   font-weight: 100;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduced font size */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better visibility */
 }
 
@@ -113,7 +115,7 @@
 h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
-  color:black; /* Warm Brown */
+  color: black; /* Warm Brown */
 }
 
 p {
@@ -159,7 +161,7 @@ p {
 
 /* Button Styles */
 .homepage-adopt-button, .homepage-details-button {
-  background-color:rgb(170, 170, 152); /* Gold */
+  background-color: rgb(170, 170, 152); /* Gold */
   color: #654321; /* Dark Brown */
   border: none;
   padding: 10px 15px; /* Add padding */

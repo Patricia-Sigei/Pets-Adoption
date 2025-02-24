@@ -2,49 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import { FaHome, FaSearch, FaUser, FaPaw } from 'react-icons/fa'; // Added FaPaw for "Our Pets"
 
-// AuthModal Component
-const AuthModal = ({ onClose }) => {
-  const [isLogin, setIsLogin] = useState(true);
-
-  const toggleForm = () => {
-    setIsLogin(!isLogin);
-  };
-
-  return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>X</button>
-        {isLogin ? (
-          <div className="login-form">
-            <h2>Login</h2>
-            <form>
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <button type="submit">Login</button>
-            </form>
-            <p>
-              Don't have an account? <span onClick={toggleForm}>Sign up</span>
-            </p>
-          </div>
-        ) : (
-          <div className="signup-form">
-            <h2>Sign Up</h2>
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <button type="submit">Sign Up</button>
-            </form>
-            <p>
-              Already have an account? <span onClick={toggleForm}>Login</span>
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
 // Navbar Component
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,19 +21,19 @@ const Navbar = () => {
         <span className="brand-name">Pet Adoption Agency</span>
         <div className="nav-links">
           <div className="nav-item">
-            <Link to="/"> {/* Link to Home */}
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}> {/* Remove link styling */}
               <FaHome className="nav-icon" />
               <span className="nav-label">Home</span>
             </Link>
           </div>
           <div className="nav-item">
-            <Link to="/catalogue"> {/* Link to Catalogue */}
+            <Link to="/catalogue" style={{ textDecoration: 'none', color: 'white' }}> {/* Remove link styling */}
               <FaPaw className="nav-icon" />
               <span className="nav-label">Catalogue</span>
             </Link>
           </div>
           <div className="nav-item">
-            <Link to="/search"> {/* Link to Search Page */}
+            <Link to="/search" style={{ textDecoration: 'none', color: 'white' }}> {/* Remove link styling */}
               <FaSearch className="nav-icon" />
               <span className="nav-label">Search</span>
             </Link>
