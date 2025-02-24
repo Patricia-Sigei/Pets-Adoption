@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import { FaHome, FaSearch, FaUser, FaPaw } from 'react-icons/fa'; 
+import AuthModal from './Auth';
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

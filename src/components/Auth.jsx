@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 const AuthModal = ({ onClose }) => {
     const [isLogin, setIsLogin] = useState(true);
   
@@ -42,4 +44,6 @@ const AuthModal = ({ onClose }) => {
         </div>
       </div>
     );
-  };
+};
+
+export default AuthModal;
