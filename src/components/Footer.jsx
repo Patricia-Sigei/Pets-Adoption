@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-section">
                     <h5>Contact Us</h5>
-                    <p><FontAwesomeIcon icon={faPhoneAlt} /> +254 700 123 456</p>
+                    <p><FontAwesomeIcon icon={faPhoneAlt} /> 401-234-5678</p>
                     <p><FontAwesomeIcon icon={faEnvelope} /> adopt@petadoptionagency.com</p>
                 </div>
 
