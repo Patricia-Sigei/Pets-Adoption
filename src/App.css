@@ -228,9 +228,9 @@ p {
   border-radius: 16px; /* Increased border radius for softer corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 10px;
+  margin: 0; /* Remove margin to eliminate spaces */
   padding: 15px;
-  width: calc(30% - 20px); /* Adjust as needed */
+  width: calc(30% - 0px); /* Adjust as needed */
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center align the items */
@@ -305,7 +305,6 @@ p {
   float: right;
   font-size: 18px;
 }
-
 
 /* Search Page Styles */
 .search-page {
