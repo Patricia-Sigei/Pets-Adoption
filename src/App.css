@@ -180,6 +180,7 @@ html {
   display: flex; /* Use flexbox for vertical centering */
   align-items: center;
   justify-content: center;
+  padding-bottom: 40px; /* Add space below the Hero */
 }
 
 .hero-text {
@@ -192,6 +193,12 @@ html {
   font-weight: 100;
   font-size: 1.2rem; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-title {
+  color: white; /* Ensure the text is white */
+  font-size: 3rem; /* Increase font size as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: adds depth */
 }
 
 .btn {
@@ -215,6 +222,7 @@ html {
   text-align: center;
   padding: 20px;
   background-color: #FFF8DC; /* Cream */
+  margin-top: 40px; /* Add space below Hero */
 }
 
 h1 {
@@ -276,10 +284,12 @@ p {
   margin-top: 10px; /* Space above buttons */
 }
 
+
+
 /* Button Styles */
 .homepage-adopt-button, .homepage-details-button {
   background-color: rgb(170, 170, 152); /* Gold */
-  color: #654321; /* Dark Brown */
+  color: black; /* Change text color to black */
   border: none;
   padding: 10px 15px; /* Add padding */
   border-radius: 4px;
@@ -454,7 +464,9 @@ select {
   background-color: #FF8C42; /* Darker Earthy Orange on hover */
 }
 
-/* Live Chat Widget */
+
+
+
 .live-chat-widget {
   background-color: white;
   padding: 16px;
@@ -899,6 +911,7 @@ footer {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff; /* Ensure copyright text is white */
 }
 
 .footer-bottom p a {

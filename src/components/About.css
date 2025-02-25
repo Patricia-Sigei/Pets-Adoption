@@ -14,29 +14,30 @@
     gap: 50px;
     width: 100vw;  /* Take full viewport width */
     max-width: 100%;
-    height: 50vh;
+    height: auto; /* Changed from 50vh to auto to adapt to content */
     margin: 0;
-    padding: 60px 5%;
+    padding: 60px 5% 80px; /* Added more bottom padding */
     flex-grow: 1;  
     position: relative;
-    background-color: white;;
+    background-color: white;
 }
 
-
 .about-heading {
-    position: absolute;
-    top: 20px; /* Adjust based on your layout */
-    left: 0;
-    right: 0;
-    margin: auto;
+    position: relative; /* Changed from absolute to relative */
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
-    animation: moveToCenter 1s ease-in-out forwards;
-    margin-bottom: 20px; /* Increase this value to add more space */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
+.title {
+    text-align: center; /* Center the subtitle */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #333;
+    margin-top: 40px; /* Increased space above the subtitle */
+    margin-bottom: 40px; /* Space below the subtitle */
+}
 
 @keyframes moveToCenter {
     from {
@@ -48,9 +49,6 @@
         opacity: 1;
     }
 }
-
-
-
 
 .about-text {
     flex: 1;
@@ -86,28 +84,34 @@
     margin-bottom: 10px;
 }
 
-/* Only center the button */
+/* Updated button container */
 .btn-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 60px; /* Increased bottom margin */
 }
 
+/* Updated button styles */
 .btn-primary {
-    background-color: #FF914D;
+    background-color: #FF8C42; /* Match your other orange buttons */
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 25px; /* Slightly more horizontal padding */
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     border-radius: 5px;
     text-decoration: none;
+    display: inline-block; /* Ensures proper sizing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .btn-primary:hover {
-    background-color: #FF914D;
+    background-color: #FF6F22; /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Image Section */
@@ -116,7 +120,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .img-large {
@@ -132,14 +135,36 @@
         flex-direction: column;
         text-align: left;
         gap: 40px;
+        height: auto; /* Ensure auto height on mobile too */
+        padding-bottom: 100px; /* Extra padding on mobile */
     }
 
     .about-text, .about-image {
         max-width: 100%;
     }
 
+    .about-text {
+        min-width: auto; /* Override min-width on mobile */
+    }
+
     .img-large {
         width: 90%;
         max-width: 400px;
+    }
+    
+    /* Ensure button has enough space on mobile */
+    .btn-container {
+        margin-bottom: 80px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .about-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
     }
 }

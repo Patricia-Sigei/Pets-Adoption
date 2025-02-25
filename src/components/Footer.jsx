@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -33,19 +32,10 @@ const Footer = () => {
                         <button type="submit">Subscribe</button>
                     </form>
                 </div>
-
-                <div className="footer-socials">
-                    <h5>Our Socials</h5>
-                    <div className="social-icons">
-                        <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
-                        <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
-                        <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                    </div>
-                </div>
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Pet Adoption Agency. All Rights Reserved.</p>
+                <p style={{ color: '#fff' }}>&copy; {new Date().getFullYear()} Pet Adoption Agency. All Rights Reserved.</p>
             </div>
         </footer>
     );

@@ -13,7 +13,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px;
-
 }
 
 /* Footer Sections */
@@ -118,6 +117,6 @@
     text-align: center;
     padding-top: 10px;
     border-top: 1px solid #333;
-    color: #FF8C42;
+    color: white; /* Change copyright text color to white */
     font-size: 14px;
 }

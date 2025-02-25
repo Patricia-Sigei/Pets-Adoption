@@ -111,6 +111,7 @@ const HomePage = () => {
       <h1>
         <FontAwesomeIcon icon={faHeart} className="heart-icon" /> Find Your Furry Soulmate <FontAwesomeIcon icon={faHeart} className="heart-icon" />
       </h1>
+      <h2>Catalogue</h2> {/* Catalogue heading */}
       <div className="homepage-gallery">
         {pets.map((pet, index) => (
           <div key={index} className="homepage-pet-card" onClick={() => handleToggleDetails(pet.name)}>
