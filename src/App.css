@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif; /* Apply globally */
 }
 
-/* Top Green Bar */
+
 .header-top {
   background-color: #FF8C42;
   color: white;
@@ -152,10 +152,12 @@
   position: relative;
   text-align: center;
   overflow: hidden; 
-  height: 80vh; 
+  height: 79.5vh; 
   width: 100%; 
   margin: 0;
   padding: 0;
+  background-color: white; /* Solid white background */
+  opacity: 0.9; /* Fully opaque for clarity */
 }
 
 .hero-image {
@@ -192,7 +194,7 @@
 }
 
 .btn:hover {
-  background-color: #FF8C42; /* Darker Earthy Orange on hover */
+  background-color: #FF6F22; /* Darker Earthy Orange on hover */
 }
 
 /* Home Page Styles */
@@ -223,7 +225,7 @@ p {
 
 .homepage-pet-card {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 16px; /* Increased border radius for softer corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin: 10px;
@@ -232,12 +234,24 @@ p {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center align the items */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for the lift effect */
+}
+
+/* Hover Effect */
+.homepage-pet-card:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
+}
+
+/* Active Effect */
+.homepage-pet-card:active {
+  transform: scale(0.95); /* Slightly decrease size when clicked */
 }
 
 .homepage-pet-image {
   width: 100%;
   height: 200px; /* Fixed height for uniformity */
-  border-radius: 8px;
+  border-radius: 16px; /* Match the card's border radius */
   object-fit: cover; /* Ensure images cover the space without distortion */
 }
 
@@ -265,6 +279,33 @@ p {
 .homepage-details-button:hover {
   background-color: #FFA07A; 
 }
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 18px;
+}
+
 
 /* Search Page Styles */
 .search-page {
@@ -596,4 +637,296 @@ select {
 
 .booking-modal .submit-button:hover {
   background-color: #FF8C42; /* Darker Earthy Orange on hover */
+}
+
+
+
+
+/* General About Us Section */
+.about-us-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+/* Layout to Keep Content & Images Together */
+.row {
+  display: flex;
+  align-items: center;
+}
+
+/* Left Side - Text Content */
+.about-text {
+  text-align: left;
+}
+
+.text-secondary {
+  color: #6c757d;
+}
+
+.text-primary {
+  color: #FF8C42;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.btn {
+  background-color: #FF8C42;
+  border: none;
+  color: white;
+  font-size: 0.9rem; /* Adjust font size as needed */
+  padding: 0.3rem 0.6rem; /* Reduce horizontal padding to make it shorter */
+  border-radius: 5px;
+  max-width: 120px; /* Set a maximum width for the button */
+  text-align: start; /* Center text within the button */
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #e07b3d;
+}
+
+
+/* Right Side - Images */
+.about-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Grid */
+.img-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.img-large {
+  width: 100%;
+  max-width: 800px; /* Increased size by 10 pixels */
+  height: auto;
+  border-radius: 5px;
+}
+
+.img-small {
+  width: 48%; /* Adjust as needed */
+  max-width: 400px; /* Increased size by 5 pixels */
+  height: auto;
+  border-radius: 5px;
+}
+
+.img-small {
+  width: 48%; /* about-2 and about-3 are side by side */
+  max-width: 250px; /* Set a max width to keep the size reasonable */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .display-4 {
+      font-size: 2rem;
+  }
+
+  .about-us-container {
+      text-align: center;
+  }
+
+  .row {
+      flex-direction: column;
+  }
+
+  .about-text,
+  .about-images {
+      width: 100%;
+  }
+
+  .img-grid {
+      align-items: center;
+  }
+
+  .img-small-wrapper {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .img-small {
+      width: 45%;
+  }
+}
+
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #111; /* Dark background */
+  color: #fff; /* White text */
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer-about {
+  width: 30%;
+}
+
+.footer-about h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-about .text-primary {
+  color: #ff5722; /* Orange color */
+}
+
+.footer-about p {
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.footer-contact,
+.footer-popular-links,
+.footer-newsletter {
+  width: 30%;
+}
+
+.footer-contact h5,
+.footer-popular-links h5,
+.footer-newsletter h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ff5722;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+.footer-contact .social-links {
+  margin-top: 15px;
+}
+
+.footer-contact .social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-popular-links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-popular-links a:hover {
+  color: #ff5722;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-newsletter button {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: #e64a19;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-nav li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #ff5722;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff5722;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: #e64a19;
 }

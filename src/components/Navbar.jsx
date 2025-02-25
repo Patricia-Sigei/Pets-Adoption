@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
-import { FaHome, FaSearch, FaUser, FaPaw } from 'react-icons/fa'; 
+import { FaHome, FaSearch, FaUser, FaPaw, FaInfoCircle } from 'react-icons/fa'; 
 import AuthModal from './Auth';
 
 const Navbar = () => {
@@ -34,6 +34,12 @@ const Navbar = () => {
             <Link to="/search" style={{ textDecoration: 'none', color: 'white' }}>
               <FaSearch className="nav-icon" />
               <span className="nav-label">Search</span>
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>
+              <FaInfoCircle className="nav-icon" />
+              <span className="nav-label">About Us</span>
             </Link>
           </div>
         </div>

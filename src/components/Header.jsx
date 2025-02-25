@@ -8,9 +8,10 @@ const Header = () => {
       {/* Top Green Bar */}
       <div className="header-top">
         <div className="header-links">
-          <a href="#" className="header-link">FAQs</a>
+          {/* Removed FAQs, Help, and Support links */}
+          {/* <a href="#" className="header-link">FAQs</a>
           <a href="#" className="header-link">Help</a>
-          <a href="#" className="header-link">Support</a>
+          <a href="#" className="header-link">Support</a> */}
         </div>
         <div className="header-icons">
           <a href="#" className="social-icon"><FaFacebookF /></a>

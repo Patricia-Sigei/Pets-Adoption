@@ -10,13 +10,16 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import LiveChat from './components/LiveChat';
 import SearchAndDisplayPets from './components/Display'; 
 import Header from './components/Header';
+import AboutUs from './components/AboutUs';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
     <div className="App">
       <Router>
         <ErrorBoundary>
-          <Header/>
+          <Header />
           <Navbar />
           
           <Routes>
@@ -24,8 +27,11 @@ function App() {
             <Route path="/catalogue" element={<HomePage />} /> {/* Catalogue Page */}
             <Route path="/search" element={<SearchPage />} /> {/* Search Page */}
             <Route path="/search-and-display" element={<SearchAndDisplayPets />} /> {/* Search and Display Pets */}
+            <Route path="/about" element={<AboutUs />} /> {/* About Us as its own page */}
+          
           </Routes>
           
+          <Footer />
           <LiveChat />
         </ErrorBoundary>
       </Router>

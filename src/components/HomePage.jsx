@@ -49,12 +49,12 @@ const HomePage = () => {
       </h1>
       <div className="homepage-gallery">
         {pets.map((pet, index) => (
-          <div key={index} className="homepage-pet-card">
+          <div key={index} className="homepage-pet-card" onClick={() => handleAdoptClick(pet)}>
             <img src={pet.image} alt={pet.name} className="homepage-pet-image" />
             <h2>{pet.name}</h2>
             <div className="button-container">
               {pet.available ? (
-                <button className="homepage-adopt-button" onClick={() => handleAdoptClick(pet)}>
+                <button className="homepage-adopt-button" onClick={(e) => { e.stopPropagation(); handleAdoptClick(pet); }}>
                   Adopt Me
                 </button>
               ) : (
@@ -62,7 +62,7 @@ const HomePage = () => {
                   Adopted
                 </button>
               )}
-              <button className="homepage-details-button" onClick={() => handleSeeMore(pet)}>
+              <button className="homepage-details-button" onClick={(e) => { e.stopPropagation(); handleSeeMore(pet); }}>
                 See More
               </button>
             </div>
