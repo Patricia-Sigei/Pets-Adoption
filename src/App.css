@@ -235,10 +235,10 @@ p {
   font-size: 1.2em;
   margin-bottom: 20px;
   color: #1a1714; /* Dark Brown */
-}
+}  
 
 .homepage-gallery {
-  display: flex;
+  display: flex; 
   flex-wrap: wrap; /* Allow wrapping to the next line */
   justify-content: center; /* Center the cards */
   margin-top: 20px;
@@ -249,9 +249,9 @@ p {
   border-radius: 16px; /* Increased border radius for softer corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 17px; /* Remove margin to eliminate spaces */
+  margin: 17px; /* Space between cards */
   padding: 15px;
-  width: calc(30% - 0px); /* Adjust as needed */
+  width: calc(30% - 34px); /* Adjust width for three cards per row minus margins */
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center align the items */
@@ -264,11 +264,6 @@ p {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
 }
 
-/* Active Effect */
-.homepage-pet-card:active {
-  transform: scale(0.95); /* Slightly decrease size when clicked */
-}
-
 .homepage-pet-image {
   width: 100%;
   height: 200px; /* Fixed height for uniformity */
@@ -276,31 +271,49 @@ p {
   object-fit: cover; /* Ensure images cover the space without distortion */
 }
 
-/* Button Container */
-.button-container {
-  display: flex;
-  justify-content: space-between; /* Space buttons evenly */
-  width: 100%; /* Full-width for the button container */
-  margin-top: 10px; /* Space above buttons */
-}
-
 /* Button Styles */
-.homepage-adopt-button, .homepage-details-button {
-  background-color: rgb(170, 170, 152); /* Gold */
-  color: black; /* Change text color to black */
+.adopt-button {
+  background-color: #FFA500; /* Orange color */
+  color: white; /* White text color */
   border: none;
-  padding: 10px 15px; /* Add padding */
-  border-radius: 4px;
+  padding: 10px 20px; /* Add padding for a better look */
+  border-radius: 4px; /* Rounded corners */
   cursor: pointer;
-  width: 48%; /* Adjust width for both buttons */
-  transition: background-color 0.3s; /* Smooth transition */
-  font-weight: bold; /* Make text bold for visibility */
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Add a subtle text shadow for contrast */
+  font-size: 14px; /* Normal font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center text */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.homepage-adopt-button:hover,
-.homepage-details-button:hover {
-  background-color: #FFA07A; 
+.adopt-button:hover {
+  background-color: #FF8C00; /* Darker orange on hover */
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center; /* Centering pagination controls */
+  margin-top: 20px; /* Space above pagination */
+}
+
+.pagination button {
+  margin: 0 10px; /* Space between buttons */
+  padding: 8px 12px; /* Padding for pagination buttons */
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(170, 170, 152); /* Gold */
+  color: black; /* Text color */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.pagination button:hover {
+  background-color: #FFA07A; /* Change background color on hover */
+}
+
+.pagination button:disabled {
+  background-color: #ccc; /* Gray background for disabled buttons */
+  cursor: not-allowed; /* Change cursor for disabled state */
 }
 
 /* Modal Styles */
@@ -328,6 +341,32 @@ p {
   float: right;
   font-size: 18px;
 }
+
+/* Modal Button Styles */
+.modal-button {
+  background-color: #FFA500; /* Orange color */
+  color: white; /* White text color */
+  border: none;
+  padding: 10px 20px; /* Add padding for a better look */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 14px; /* Normal font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center text */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.modal-button:hover {
+  background-color: #FF8C00; /* Darker orange on hover */
+}
+
+/* Additional styles as previously defined... */
+/* Additional styles as previously defined... */
+
+
+
+
+
 
 /* Search Page Styles */
 .search-page {
@@ -438,6 +477,11 @@ select {
 .search-pet-info p {
   color: #654321; /* Dark Brown */
 }
+
+
+
+
+
 
 /* Live Chat Container */
 .live-chat-container {

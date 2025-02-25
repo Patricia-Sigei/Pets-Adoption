@@ -8,11 +8,8 @@ const AboutUs = () => {
         <div className="about-us-container">
             {/* Left - Text Content */}
             <div className="about-text">
-                <h1 className="title">
-                <h1 className="about-heading">About Us</h1>
-
-                    <span className="text-primary">Every Pet</span> Deserves a <span className="text-secondary">Loving Home</span>
-                </h1>
+                <h1 className="about-heading">Every Pet Deserves a <span className="text-secondary">Loving Home</span></h1>
+                <h2 className="title">About Us</h2>
                 <p className="description">
                     We connect rescue pets with caring families through a seamless adoption process.  
                     Our priority is to ensure a perfect match, fostering lifelong companionship.
