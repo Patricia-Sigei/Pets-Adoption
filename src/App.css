@@ -8,6 +8,15 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* App.css */
+
+
+
+
 .header-top {
   background-color: #FF8C42;
   color: white;
@@ -147,38 +156,42 @@
   font-weight: 500; /* Label styling */
 }
 
-/* Hero Section Styles */
-.hero {
+/* App.css */
+
+/* Hero section styles */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  text-align: center;
-  overflow: hidden; 
-  height: 79.5vh; 
-  width: 100%; 
-  margin: 0;
-  padding: 0;
-  background-color: white; /* Solid white background */
-  opacity: 0.7; /* Fully opaque for clarity */
 }
 
-.hero-image {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  object-fit: cover; /* Maintain aspect ratio */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; 
+.hero {
+  height: 79.5vh; /* Adjust height as needed */
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/images/homepg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 0; /* Remove padding if not needed */
+  color: white;
+  text-align: center; /* Center the text */
+  display: flex; /* Use flexbox for vertical centering */
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black; /* Text color */
+  color: white;
+  text-align: center;
+  position: relative; /* Remove absolute positioning */
+  transform: none; /* Remove transform */
+  top: auto; /* Remove top */
+  left: auto; /* Remove left */
   font-weight: 100;
   font-size: 1.2rem; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .btn {
@@ -186,15 +199,15 @@
   margin: 20px auto; 
   padding: 20px 20px;
   background-color: #FF8C42; 
-  color: white; /* Text color */
+  color: white; 
   border: none;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px; 
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth transition */
+  transition: background-color 0.3s; 
 }
 
 .btn:hover {
-  background-color: #FF6F22; /* Darker Earthy Orange on hover */
+  background-color: #FF6F22; 
 }
 
 /* Home Page Styles */
@@ -228,7 +241,7 @@ p {
   border-radius: 16px; /* Increased border radius for softer corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 0; /* Remove margin to eliminate spaces */
+  margin: 17px; /* Remove margin to eliminate spaces */
   padding: 15px;
   width: calc(30% - 0px); /* Adjust as needed */
   display: flex;
