@@ -9,6 +9,8 @@ const AboutUs = () => {
             {/* Left - Text Content */}
             <div className="about-text">
                 <h1 className="title">
+                <h1 className="about-heading">About Us</h1>
+
                     <span className="text-primary">Every Pet</span> Deserves a <span className="text-secondary">Loving Home</span>
                 </h1>
                 <p className="description">
